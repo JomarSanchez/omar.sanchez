@@ -1,0 +1,118 @@
+/* Menú de navegación */
+
+nav{
+    position: fixed;
+    max-width: 75em;
+    right: 0px;
+    left: 0px;
+    margin: 1.1em auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-blanco);
+    box-shadow: inset 0px 0px 10px 6px var(--color-blanco);
+    transition: all .3s;
+    padding: 1em;
+}
+
+/* Logo Principal */
+
+.logo{
+
+    color: var(--color-negro);
+    text-transform: uppercase;
+    letter-spacing: 2px;    
+    /* line-height: 60px; */
+    font-size: .8em;
+    transition: all .3s;
+    text-decoration: none;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0px 15px;
+}
+
+nav ul li a{
+    line-height: 46px;
+    text-decoration: none;
+    color: var(--color-negro);
+    letter-spacing: 2px;
+    transition: all .3s;
+    text-transform: uppercase;
+    font-family: 'Patrick Hand';
+    font-size: .9em;
+}
+
+.underscore::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-negro);
+    transition: width .6s;
+}
+.underscore:hover::after{
+    width: 100%;
+}
+.menuToggle{
+    display: none;
+}
+
+/* Responsive Desing */
+
+@media (max-width:768px){
+    
+    nav{
+        margin: auto;
+        height: 3em;
+    }
+
+    .logo{
+        font-size: .8em;
+        align-items: center;
+    }
+    .menuToggle{
+        display: block;
+        order: 2;
+        cursor: pointer;
+    }
+    .listMenu.show{
+        right: 0;
+    }
+
+    .listMenu{
+        box-sizing: border-box;
+        position: fixed;
+        width: 50%;
+        height: 50%;
+        right: -80%;
+        background: var(--color-negro);
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        transition:  .5s;
+        overflow-y: auto;
+    }
+    .active li a{
+        color: var(--color-blanco);
+    }
+
+    .underscore::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: var(--color-blanco);
+        transition: width .6s;
+    }
+    .underscore:hover::after{
+        width: 100%;
+    }
+}

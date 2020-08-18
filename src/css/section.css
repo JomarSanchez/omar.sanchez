@@ -1,0 +1,48 @@
+
+section{
+    max-width: 75em;
+    margin: auto;
+    margin-top: 6em;
+}
+
+.detail{
+    width: 15em;
+    height: 20em;
+    padding: 1em;
+    background: var(--color-blanco);
+    border-radius: .5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logoName{
+    width: 12em;
+    height: 12em;
+    margin: auto;
+}
+.imgLogo{
+    width: 12em;
+    height: 12em;
+    border-radius: 60%;
+}
+.programing{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.pais{
+    text-align: center;
+}
+
+/* Responsive Desing */
+
+@media (max-width:768px){
+    section{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* margin: 2.5em .5em 0 .5em; */
+        margin-top: 5em;
+    }
+}
